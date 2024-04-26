@@ -1,0 +1,54 @@
+/* https://coolors.co/palette/606c38-283618-fefae0-dda15e-bc6c25
+
+
+--dark-moss-green: #606c38ff;
+--pakistan-green: #283618ff;
+--cornsilk: #fefae0ff;
+--earth-yellow: #dda15eff;
+--tigers-eye: #bc6c25ff; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(254, 250, 224); */
+    justify-content: center;
+    
+}
+
+#area-cmp {
+    /* border: 1px solid black; */
+    /* background-color: #283618ff; */
+    align-self: center;
+    /* margin: 1rem 0; */
+    /* font-size: x-large; */
+    /* padding: 5rem; */
+}
+
+#desc-cmp {
+    border: 1px solid black;
+}
+
+#actions-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-container {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    /* background-color: #283618ff; */
+}
+
+#map-comp {
+    border: 1px solid black;
+    /* align-self: center;
+    
+    background-color: black; */
+}
