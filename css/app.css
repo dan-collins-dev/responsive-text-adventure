@@ -14,6 +14,7 @@
 }
 
 #game-container {
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     /* background-color: rgb(254, 250, 224); */

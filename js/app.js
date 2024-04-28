@@ -1,13 +1,30 @@
-import { createActionCmp, updateAreaCmp, updateDescCmp } from "./modules/components.js"
-import { rooms } from "./modules/roomData.js"
+import { createMoveActionCmps, removeAllActions, updateAreaCmp, updateDescCmp } from "./modules/components.js"
+import { rooms, currentRoom } from "./modules/roomData.js"
 const actionsContainer = document.getElementById("actions-container")
 
-let currentRoom = rooms[0]
+// document.addEventListener("move", () => {
+//     // TODO: Update UI after moving to the new room
+//     console.log(`Current Room is ${currentRoom.name}`)
+//     moveRooms();
+//     removeAllActions()
+// })
 
-actionsContainer.append(createActionCmp(currentRoom))
+
+for (let r of rooms) {
+    console.log(r.id)
+}
+
+// on entering a room
+createMoveActionCmps(currentRoom)
 updateAreaCmp(currentRoom)
 updateDescCmp(currentRoom)
-kaboom({
+
+// When switching rooms
+// removeAllActions()
+
+
+
+/* kaboom({
     width: 256,
     height: 256,
     font: "sans-serif",
@@ -16,9 +33,7 @@ kaboom({
     scale: 1
 })
 
-loadSprite("test", "./assets/sprites/test.png")
-
-const btn = document.getElementById("test")
+//loadSprite("test", "./assets/sprites/test.png")
 
 const mapComponent = document.getElementById("map-cmp");
 
@@ -57,17 +72,15 @@ const moveCameraLeft = () => {
     camPos(dx, dy)
 }
 
-add([
-    sprite("test"),
-    pos(0, 0),
-    area(),
-    z(1)
-])
+// add([
+//     sprite("test"),
+//     pos(0, 0),
+//     area(),
+//     z(1)
+// ])
 
 const moveCameraRight = () => {
     const dx = camPos().x + 16;
     const dy = camPos().y
     camPos(dx, dy)
-}
-
-btn.addEventListener("click", moveCameraRight)
+} */

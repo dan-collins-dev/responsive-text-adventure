@@ -1,20 +1,54 @@
-export const rooms = []
-const room = {
+export const rooms = [];
+let room0 = {
     id: 0,
     name: "Your House",
-    desc: "Test Description",
+    desc: "Your home is modest, but satisfies the needs of a farmer and his son.",
     actions: {
         move: {
             north: null,
-            east: 1
-        }
+            east: {
+                rId: 1,
+                text: "Go Outside",
+            },
+            south: null,
+            west: null
+        },
+        interact: {},
     },
-    exits: {
-        north: null,
-        east: 1,
-        south: null,
-        west: null,
-    }
+    entities: {
+        visible: {},
+        hidden: {},
+    },
 };
 
-rooms.push(room)
+let room1 = {
+    id: 1,
+    name: "A Worn Path outside your house.",
+    desc: "You find yourself on a worn, dirt path on the outskirts of your village, The Village. The Village used to have a different name, but it was lost ages ago due to inconvenience. The founder of The Village was long-winded, so too was the name he gave it. The townsfolk grew weary of saying the name and eventually stopped saying it. It was for the best.",
+    actions: {
+        move: {
+            north: null,
+            east: null,
+            south: null,
+            west: {
+                rId: 0,
+                text: "Go back inside your home",
+            },
+        },
+        interact: {},
+    },
+    entities: {
+        visible: {},
+        hidden: {},
+    },
+};
+
+rooms.push(room0);
+rooms.push(room1);
+
+export let currentRoom = rooms[0]
+
+export const setNewRoom = (roomId) => {
+    currentRoom = rooms[roomId]
+    console.log(currentRoom)
+}
